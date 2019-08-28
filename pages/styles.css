@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+*{
+  font-family: 'Nunito regular', sans-serif;
+}
+
 .bg-primary{
-  background-color: rgba(98, 117, 233, 1) !important;
+  background-color: rgba(255, 51, 51) !important;
   border-radius: 0px !important;
 }
 .item-white{
@@ -7,13 +13,12 @@
   color: white !important;
 }
 
-
-
-.ui.vertical.menu .item>i.icon{
-  @media screen and (max-width: 768px) {
-      float: left;
-      padding-right: 1.5rem;
-      margin-left: 0px !important;
+/* MENU RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .ui.vertical.menu .item>i.icon{
+    float: left;
+    padding-right: 1.5rem;
+    margin-left: 0px !important;
   }
 }
 

@@ -34,7 +34,7 @@ export default class Navegacion extends Component {
             <Grid.Column className="centered">
               <Menu secondary>
                 <Menu.Item className="header item-white">
-                  <h1>EsNovel</h1>
+                  <h1>La Patria</h1>
                 </Menu.Item>
                 <Menu.Menu position="right" >
                   <Menu.Item  
