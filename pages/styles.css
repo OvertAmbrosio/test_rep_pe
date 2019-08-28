@@ -1,0 +1,54 @@
+.bg-primary{
+  background-color: rgba(98, 117, 233, 1) !important;
+  border-radius: 0px !important;
+}
+.item-white{
+  border-left: solid rgba(34,36,38,0) !important;
+  color: white !important;
+}
+
+
+
+.ui.vertical.menu .item>i.icon{
+  @media screen and (max-width: 768px) {
+      float: left;
+      padding-right: 1.5rem;
+      margin-left: 0px !important;
+  }
+}
+
+.ui.borderless.menu {
+  box-shadow: none;
+  flex-wrap: wrap;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ui.borderless.menu .header.item {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.ui.mobile.only.grid .ui.menu .ui.vertical.menu {
+  display: none;
+}
+
+.ui.mobile.only.grid .ui.vertical.menu .dropdown.icon {
+  float: unset;
+}
+
+.ui.vertical.menu.fluid{
+  width:100%!important
+}
+.ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu {
+  position: static;
+  background-color: unset;
+  border: none;
+  box-shadow: none;
+}
+
+.ui.mobile.only.grid .ui.vertical.menu .ui.dropdown.item .menu {
+  margin-top: 6px;
+}
+
