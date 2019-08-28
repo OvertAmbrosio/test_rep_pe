@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import React, { Component} from "react";
+
 //Imagen
 import Logo from './logo.png'
 //Componentes Semantic Ui
-import { Input, Menu, Segment, Grid, Button, Icon, Popup, Header,  List } from 'semantic-ui-react'
+import { Menu, Segment, Grid, Button, Icon, Popup, Header,  List } from 'semantic-ui-react'
 
 export default class Navegacion extends Component {
   state = { dropdownMenuStyle: {

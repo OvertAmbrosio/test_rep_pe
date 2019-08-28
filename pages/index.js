@@ -1,3 +1,4 @@
+import React from 'react'
 import fetch from 'isomorphic-unfetch'
 
 //Estilos
@@ -14,7 +15,7 @@ const Index = (props) => (
     <Segment className='border-none mb-2' textAlign='left' clearing>
       <Grid stackable columns={3}>
         {props.articulos.map(articulo => (
-          <Articulo key={articulo.id} titulo={articulo.name} link={`/articulo/${articulo.id}`} tag={articulo.username} email={articulo.email}/>
+          <Articulo key={articulo.id} titulo={articulo.name} link={articulo.id} tag={articulo.username} email={articulo.email}/>
         ))}
       </Grid>
     </Segment>
