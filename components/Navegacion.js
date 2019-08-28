@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React, { Component} from "react";
-
+//Imagen
+import Logo from './logo.png'
+//Componentes Semantic Ui
 import { Input, Menu, Segment, Grid, Button, Icon, Popup, Header,  List } from 'semantic-ui-react'
 
 export default class Navegacion extends Component {
@@ -30,9 +32,7 @@ export default class Navegacion extends Component {
           <Grid.Row>
             <Grid.Column className="centered">
               <Menu secondary>
-                <Menu.Item className="header item-white">
-                  <h1>La Patria</h1>
-                </Menu.Item>
+                  <img src={Logo}/>
                 <Menu.Menu position="right" >
                   <Link href="www.google.com">
                     <Menu.Item  
@@ -105,9 +105,7 @@ export default class Navegacion extends Component {
         </Grid>
         <Grid padded className="mobile only">
           <Menu borderless fluid size="huge" className="bg-primary">
-            <Menu.Item header as="a" className="item-white">
-              La Patria
-            </Menu.Item>
+              <img src={Logo}/>
             <Menu.Menu position="right">
               <Menu.Item>
                 <Button

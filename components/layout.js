@@ -2,15 +2,25 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Navegacion from "./Navegacion"
+import { Grid, Column } from "semantic-ui-react";
+ 'semantic-ui-react'
 
 const Layout = ({ children }) => {  
     return (
       <>
         <Navegacion />
         <div>
-          <main>{children}</main>
+          <Grid stackable>
+            <Grid.Row className="centered">
+              <Grid.Column width={12}>
+                <main>{children}</main>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
           <footer>
-            
+          © {new Date().getFullYear()}, Hecho Por
+          {` `}
+          <a href="https://github.com/OvertAmbrosio/test_rep_pe">Overt Ambrosio</a>
           </footer>
         </div>
       </>
