@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
             </Grid.Row>
           </Grid>
           <footer>
+            <br></br>
             © {new Date().getFullYear()}, Hecho Por
             {` `}
             <a href="https://github.com/OvertAmbrosio/test_rep_pe">Overt Ambrosio</a>
