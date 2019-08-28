@@ -1,5 +1,4 @@
-import { Link } from 'next/link'
-
+import Link from 'next/link'
 import React, { Component} from "react";
 
 import { Input, Menu, Segment, Grid, Button, Icon, Popup, Header,  List } from 'semantic-ui-react'
@@ -10,8 +9,6 @@ export default class Navegacion extends Component {
               activeItem: "inicio"
             }
           }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   handleToggleDropdownMenu = () => {
     let newState = Object.assign({}, this.state);
@@ -37,87 +34,70 @@ export default class Navegacion extends Component {
                   <h1>La Patria</h1>
                 </Menu.Item>
                 <Menu.Menu position="right" >
-                  <Menu.Item  
-                    className="item-white"
-                    as= { Link }
-                    to= '/'
-                    name='inicio'
-                    icon="home"
-                    active={activeItem === 'inicio'} 
-                    onClick={this.handleItemClick} />
-                  <Menu.Item
-                    className="item-white"
-                    as= { Link }
-                    to= '404'
-                    name='categorias'
-                    icon='fire'
-                    active={activeItem === 'categorias'}
-                    onClick={this.handleItemClick}
-                  />
-                  <Menu.Item
-                    className="item-white"
-                    as= { Link }
-                    to= '/'
-                    name='novelas'
-                    icon= 'grid layout'
-                    active={activeItem === 'novelas'}
-                    onClick={this.handleItemClick}
-                  />
-                  <Menu.Item
-                    className="item-white"
-                    as= { Link }
-                    to= '/'
-                    content= 'Mi Biblioteca'
-                    name='mi_biblioteca'
-                    icon= 'book'
-                    active={activeItem === 'mi_biblioteca'}
-                    onClick={this.handleItemClick}
-                  />
-                  <Menu.Item>
-                    <Input icon='search' placeholder='Search...' />
-                  </Menu.Item>
-                  <Popup position='bottom center' wide='very' className='pl-0' trigger={
-                    <Menu.Item
+                  <Link href="www.google.com">
+                    <Menu.Item  
+                      as="a"
                       className="item-white"
-                      as= { Link }
-                      to= '/'
-                      name='login'
-                      icon= 'sign in'
-                      active={activeItem === 'login'}
-                      onClick={this.handleItemClick}
-                    />
-                  } on='click'>
-                    <Grid divided columns='1'>
-                      <Grid.Column>
-                        <Header as='h4' textAlign='center'>
-                          <Header.Content className='text-primary'>
-                            ¡Bienvenido a EsNovel!
-                          </Header.Content>
-                        </Header>
-                          <List divided selection>
-                            <List.Item>
-                              <Button color='facebook' circular icon='facebook'/> Acceder con Facebook
-                            </List.Item>
-                            <List.Item>
-                              <Button color='twitter' circular icon='twitter'/> Acceder con Twitter
-                            </List.Item>
-                            <List.Item>
-                              <Button color='google plus' circular icon='google'/> Acceder con Google
-                            </List.Item>
-                          </List>
-                        <Header as='h5' textAlign='center'>
-                          <Header.Content className='text-primary'>
-                            ¿Aún no tienes una cuenta? <br></br>
-                            <Link to='/'>
-                              <Header.Subheader as='a' to='/'>
-                                <Icon name='user plus' className='text-primary'/>Registrate
-                              </Header.Subheader>
-                            </Link>
-                          </Header.Content>
-                        </Header>
-                      </Grid.Column>
-                    </Grid>
-                  </Popup>
+                      name='inicio'
+                      icon="home"
+                      active={activeItem === 'inicio'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='noticias'
+                      icon="newspaper"
+                      active={activeItem === 'noticias'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='RTV'
+                      icon="video camera"
+                      active={activeItem === 'rtv'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='opinion'
+                      icon="coffee"
+                      active={activeItem === 'opinion'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='entretenimiento'
+                      icon="play"
+                      active={activeItem === 'entretenimiento'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='destacados'
+                      icon="fire"
+                      active={activeItem === 'destacados'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='perú'
+                      icon="target"
+                      active={activeItem === 'perú'}/>
+                  </Link>
+                  <Link href="/">
+                    <Menu.Item  
+                      as="a"
+                      className="item-white"
+                      name='mas sitios'
+                      icon="plus"
+                      active={activeItem === 'mas sitios'}/>
+                  </Link>
                 </Menu.Menu>
               </Menu>
             </Grid.Column>
@@ -126,7 +106,7 @@ export default class Navegacion extends Component {
         <Grid padded className="mobile only">
           <Menu borderless fluid size="huge" className="bg-primary">
             <Menu.Item header as="a" className="item-white">
-              EsNovel
+              La Patria
             </Menu.Item>
             <Menu.Menu position="right">
               <Menu.Item>
@@ -147,54 +127,70 @@ export default class Navegacion extends Component {
               style={this.state.dropdownMenuStyle}
               className="bg-primary"
             >
-              <Menu.Item 
-                className="item-white"
-                as= { Link }
-                to= '/'
-                name='inicio'
-                icon="home"
-                active={activeItem === 'inicio'} 
-                onClick={this.handleItemClick} />
-              <Menu.Item
-                className="item-white"
-                as= { Link }
-                to= '404'
-                name='categorias'
-                icon='fire'
-                active={activeItem === 'categorias'}
-                onClick={this.handleItemClick}
-              />
-              <Menu.Item
-                className="item-white"
-                as= { Link }
-                to= '/'
-                name='novelas'
-                icon= 'grid layout'
-                active={activeItem === 'novelas'}
-                onClick={this.handleItemClick}
-              />
-              <Menu.Item
-                className="item-white"
-                as= { Link }
-                to= '/'
-                content= 'Mi Biblioteca'
-                name='mi_biblioteca'
-                icon= 'book'
-                active={activeItem === 'mi_biblioteca'}
-                onClick={this.handleItemClick}
-              />
-              <Menu.Item>
-                <Input icon='search' placeholder='Search...' />
-              </Menu.Item>
-              <Menu.Item
-                className="item-white"
-                as= { Link }
-                to= '/'
-                name='login'
-                icon= 'user'
-                active={activeItem === 'login'}
-                onClick={this.handleItemClick}
-              />
+              <Link href="www.google.com">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='inicio'
+                  icon="home"
+                  active={activeItem === 'inicio'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='noticias'
+                  icon="newspaper"
+                  active={activeItem === 'noticias'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='RTV'
+                  icon="video camera"
+                  active={activeItem === 'rtv'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='opinion'
+                  icon="coffee"
+                  active={activeItem === 'opinion'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='entretenimiento'
+                  icon="play"
+                  active={activeItem === 'entretenimiento'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='destacados'
+                  icon="fire"
+                  active={activeItem === 'destacados'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='perú'
+                  icon="target"
+                  active={activeItem === 'perú'}/>
+              </Link>
+              <Link href="/">
+                <Menu.Item  
+                  as="a"
+                  className="item-white"
+                  name='mas sitios'
+                  icon="plus"
+                  active={activeItem === 'mas sitios'}/>
+              </Link>
             </Menu>
           </Menu>
         </Grid>
