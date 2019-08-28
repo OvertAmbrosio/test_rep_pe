@@ -12,15 +12,15 @@ const Layout = ({ children }) => {
         <div>
           <Grid stackable>
             <Grid.Row className="centered">
-              <Grid.Column width={12}>
+              <Grid.Column width={13}>
                 <main>{children}</main>
               </Grid.Column>
             </Grid.Row>
           </Grid>
           <footer>
-          © {new Date().getFullYear()}, Hecho Por
-          {` `}
-          <a href="https://github.com/OvertAmbrosio/test_rep_pe">Overt Ambrosio</a>
+            © {new Date().getFullYear()}, Hecho Por
+            {` `}
+            <a href="https://github.com/OvertAmbrosio/test_rep_pe">Overt Ambrosio</a>
           </footer>
         </div>
       </>
