@@ -1,4 +1,5 @@
-import PropTypes from "prop-types"
+import React, { forwardRef } from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 
 //componentes
@@ -7,7 +8,7 @@ import { Grid, Image, Segment, Icon, Item, Label } from 'semantic-ui-react'
 const Articulo = ({titulo, link, tag, email}) => (
   <Grid.Column >
     <Segment className='border-none pointer'>
-      <Link href='/articulo/[id]' as={`/articulo/${link}`}>
+      <Link href='/articulo/[id]' as={link}>
         <Item.Group>
           <Item>
             <Item.Content>
@@ -16,7 +17,6 @@ const Articulo = ({titulo, link, tag, email}) => (
           </Item>
           <Image 
             as='div'
-            className='image-index'
             fluid
             label={{ color: 'blue', content: tag, ribbon: true }}
             src='http://placehold.it/250x250'
@@ -37,7 +37,7 @@ Articulo.propTypes = {
 
 Articulo.defaultProps = {
   titulo: ``,
-  link: ``,
+  link: 0,
   tag: ``,
   email: ``
 }
