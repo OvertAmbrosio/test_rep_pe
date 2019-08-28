@@ -34,7 +34,7 @@ export default class Navegacion extends Component {
               <Menu secondary>
                   <img src={Logo}/>
                 <Menu.Menu position="right" >
-                  <Link href="www.google.com">
+                  <Link href="/">
                     <Menu.Item  
                       as="a"
                       className="item-white"
@@ -125,7 +125,7 @@ export default class Navegacion extends Component {
               style={this.state.dropdownMenuStyle}
               className="bg-primary"
             >
-              <Link href="www.google.com">
+              <Link href="/">
                 <Menu.Item  
                   as="a"
                   className="item-white"

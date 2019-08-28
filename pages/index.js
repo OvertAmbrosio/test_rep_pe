@@ -1,6 +1,3 @@
-import React from 'react'
-import Link from 'next/link'
-
 //Estilos
 import 'semantic-ui-css/semantic.min.css'
 import '../css/styles.css'
@@ -13,9 +10,9 @@ import Articulo from "../components/Articulo"
 const Index = props => (
   <Layout>
     <Segment className='border-none mb-2' textAlign='left' clearing>
-      <Grid stackable columns={4}>
+      <Grid stackable columns={3}>
         {props.articulos.map(articulo => (
-          <Articulo titulo={articulo.name} link={articulo.id} tag={articulo.username}/>
+          <Articulo titulo={articulo.name} link={articulo.id} tag={articulo.username} email={articulo.email}/>
         ))}
       </Grid>
     </Segment>
