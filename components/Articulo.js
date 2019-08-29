@@ -6,12 +6,12 @@ import Link from 'next/link'
 import { Grid, Image, Segment, Icon, Item, Label, Ref } from 'semantic-ui-react'
 
 const Titulo = React.forwardRef(({titulo, link}, ref) => (
-  <Item.Header ref={ref}><a href={`/articulo/${link}`}>{titulo}</a></Item.Header>
+  <Item.Header><a ref={ref} href={`/articulo/${link}`}>{titulo}</a></Item.Header>
 ))
 
 export default class Articulo extends Component{
 
-  createdRef = createRef()
+  createdRef = React.createRef()
   functionalRef = null
 
   handleRef = (node) => {
@@ -26,8 +26,8 @@ export default class Articulo extends Component{
           <Item>
             <Item.Content>
               <Link href='/articulo/[id]' as={`/articulo/${this.props.link}`}>
-              <Ref innerRef={this.createdRef}>
-                <Titulo titulo={this.props.titulo} link={this.props.link}/>
+                <Ref innerRef={this.createdRef}>
+                  <Titulo titulo={this.props.titulo} link={this.props.link}/>
                 </Ref>
               </Link>
             </Item.Content>

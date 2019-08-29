@@ -2,7 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Navegacion from "./Navegacion"
-import { Grid, Column } from "semantic-ui-react";
+import Footer from "./Footer"
+import { Grid} from "semantic-ui-react";
 
 const Layout = ({ children }) => {  
     return (
@@ -16,12 +17,7 @@ const Layout = ({ children }) => {
               </Grid.Column>
             </Grid.Row>
           </Grid>
-          <footer>
-            <br></br>
-            © {new Date().getFullYear()}, Hecho Por
-            {` `}
-            <a href="https://github.com/OvertAmbrosio/test_rep_pe">Overt Ambrosio</a>
-          </footer>
+          <Footer/>
         </div>
       </>
     )
