@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import Navegacion from "./Navegacion"
 import { Grid, Column } from "semantic-ui-react";
- 
 
 const Layout = ({ children }) => {  
     return (
